@@ -12,6 +12,7 @@
         android:fullBackupContent="@xml/backup_descriptor">
         <activity
             android:name=".activities.SplashActivity"
+            android:theme="@style/Theme.Friends.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
