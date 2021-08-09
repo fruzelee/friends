@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Friends</string>
+
+    <string name="splash_screen_title">Friends</string>
 </resources>
