@@ -1,4 +1,4 @@
-package com.github.fruzelee.friends.activities
+package com.github.fruzelee.friends.view.activities
 
 import android.content.Intent
 import android.os.Build
@@ -10,7 +10,6 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.github.fruzelee.friends.MainActivity
 import com.github.fruzelee.friends.R
 import com.github.fruzelee.friends.databinding.ActivitySplashBinding
 

@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Friends"
         android:fullBackupContent="@xml/backup_descriptor">
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.github.fruzelee.friends.view.activities.SplashActivity"
             android:theme="@style/Theme.Friends.NoActionBar"
             android:exported="true">
             <intent-filter>
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.activities.MainActivity"
             android:exported="true">
         </activity>
     </application>
