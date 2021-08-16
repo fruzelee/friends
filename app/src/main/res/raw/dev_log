@@ -1,4 +1,4 @@
-v1.0.2021.6.1
+v0.1(1)
 What's new:
 -new: created a brand new project named “friends” under com.github.fruzelee.friends
 -new: added necessary libraries
@@ -20,3 +20,4 @@ What's new:
 -new: Show the progress dialog if the SwipeRefreshLayout is not visible while loading random friends and hide when the usage is completed.
 -new: Sets up a SwipeRefreshLayout.OnRefreshListener that is invoked when the user performs a swipe-to-refresh gesture.
 -new: added dev_log
+-update: friends list layout item UI
