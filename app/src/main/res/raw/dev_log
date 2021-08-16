@@ -32,3 +32,10 @@ What's new:
 -new: added layoutAnimation on recyclerView to make it more attractive when the item loads while changing orientation
 -new: added a condition where setRandomFriendsResponseInUI if the response isNotEmpty
 -new: also showing and hiding recyclerView and tvNoFriendsAvailable TextView depends on the response isNotEmpty or not
+
+
+v0.2(2)
+What's new:
+-new: added project descriptions on readme.md
+-update: gradle scripts
+-update: added comments on libraries of app level build.gradle
