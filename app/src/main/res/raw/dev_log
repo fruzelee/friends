@@ -39,5 +39,6 @@ What's new:
 -new: added project descriptions on readme.md
 -update: gradle scripts
 -update: added comments on libraries of app level build.gradle
--updated README.md
+-update: README.md
 -update: loading large portrait instead of medium for better portrait quality on friends list
+-update: new Screenshots on readme.md

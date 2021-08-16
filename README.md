@@ -22,3 +22,9 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
 2. **Retrofit**, for Network call
 3. **RxJava**, for composing asynchronous and event-based programs by using observable sequences.
 4. **Glide**, for image loading.
+
+# Screenshots
+
+<img src="github_assets/1_splash_screen.jpg"  width="700" />
+<img src="github_assets/2_friends_list_portrait.jpg"  height="700" />
+<img src="github_assets/3_friends_list_landscape.jpg"  height="700" />
