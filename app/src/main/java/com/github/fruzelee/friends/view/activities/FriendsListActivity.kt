@@ -71,7 +71,19 @@ class FriendsListActivity : AppCompatActivity() {
                         mBinding.srlRandomFriends.isRefreshing = false
                     }
 
-                    setRandomFriendsResponseInUI(randomFriendsResponse)
+                    if (it.results.isNotEmpty()) {
+
+                        mBinding.rvFriendsList.visibility = View.VISIBLE
+                        mBinding.tvNoFriendsAvailable.visibility = View.GONE
+
+                        setRandomFriendsResponseInUI(randomFriendsResponse)
+                    } else {
+
+                        mBinding.rvFriendsList.visibility = View.GONE
+                        mBinding.tvNoFriendsAvailable.visibility = View.VISIBLE
+                    }
+
+
                 }
             })
 

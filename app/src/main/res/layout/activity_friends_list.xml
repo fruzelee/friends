@@ -13,17 +13,14 @@
         <RelativeLayout
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/primary_color"
-            android:minHeight="?android:attr/actionBarSize">
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/primary_color">
 
             <TextView
                 android:id="@+id/tv_toolbar_title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_centerInParent="true"
-                android:layout_centerVertical="true"
-                android:layout_toStartOf="@id/iv_swap"
                 android:gravity="center"
                 android:text="@string/friends_list"
                 android:textColor="@color/white"
@@ -32,7 +29,7 @@
             <ImageView
                 android:id="@+id/iv_swap"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
@@ -46,6 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible"
+            android:layoutAnimation="@anim/recycler_view_layout_animation"
             android:layout_below="@id/toolbar"
             tools:listitem="@layout/item_friends_list_layout" />
 
@@ -56,7 +54,7 @@
             android:gravity="center"
             android:text="@string/label_no_friends_available"
             android:textSize="16sp"
-            android:textColor="@color/primary_color"
+            android:textColor="@color/red"
             android:layout_centerInParent="true"
             android:textStyle="bold"
             android:visibility="gone" />
