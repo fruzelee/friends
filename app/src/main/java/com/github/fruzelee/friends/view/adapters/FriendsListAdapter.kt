@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.github.fruzelee.friends.databinding.ItemFriendsListLayoutBinding
-import com.github.fruzelee.friends.model.entities.RandomFriendsResponse
+import com.github.fruzelee.friends.model.entities.FriendsListResponse
 import com.github.fruzelee.friends.utils.loadImage
 
 /**
@@ -15,9 +15,9 @@ import com.github.fruzelee.friends.utils.loadImage
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-class RandomFriendsListAdapter : RecyclerView.Adapter<RandomFriendsListAdapter.ViewHolder>() {
+class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>() {
 
-    private var friends: List<RandomFriendsResponse.Result> = listOf()
+    private var friends: List<FriendsListResponse.Result> = listOf()
 
     /**
      * Inflates the item views which is designed in xml layout file
@@ -67,7 +67,7 @@ class RandomFriendsListAdapter : RecyclerView.Adapter<RandomFriendsListAdapter.V
         private val tvCountry = view.tvCountry
 
         @SuppressLint("SetTextI18n")
-        fun bindTo(friend: RandomFriendsResponse.Result?) {
+        fun bindTo(friend: FriendsListResponse.Result?) {
             // Load the friend image in the ImageView.
             ivPortrait.loadImage(friend!!.picture.medium)
             tvFullName.text = friend.name.title + " " + friend.name.first + " " + friend.name.last
@@ -75,17 +75,17 @@ class RandomFriendsListAdapter : RecyclerView.Adapter<RandomFriendsListAdapter.V
         }
     }
 
-    private val diffCallback = object : DiffUtil.ItemCallback<RandomFriendsResponse.Result>() {
+    private val diffCallback = object : DiffUtil.ItemCallback<FriendsListResponse.Result>() {
         override fun areItemsTheSame(
-            oldItem: RandomFriendsResponse.Result,
-            newItem: RandomFriendsResponse.Result
+            oldItem: FriendsListResponse.Result,
+            newItem: FriendsListResponse.Result
         ): Boolean {
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(
-            oldItem: RandomFriendsResponse.Result,
-            newItem: RandomFriendsResponse.Result
+            oldItem: FriendsListResponse.Result,
+            newItem: FriendsListResponse.Result
         ): Boolean {
 
             /**

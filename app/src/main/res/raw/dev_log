@@ -22,3 +22,7 @@ What's new:
 -new: added dev_log
 -update: friends list layout item UI
 -update: refactor the project a bit
+-new: added a custom toolbar on FriendsListView
+-update: change the layout from ConstraintLayout to RelativeLayout on FriendsListView
+-change: refactor the project
+-update: updated the themes

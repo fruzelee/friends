@@ -10,15 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import com.github.fruzelee.friends.R
 import com.github.fruzelee.friends.databinding.ActivityFriendsListBinding
-import com.github.fruzelee.friends.model.entities.RandomFriendsResponse
-import com.github.fruzelee.friends.view.adapters.RandomFriendsListAdapter
-import com.github.fruzelee.friends.viewmodel.RandomFriendsViewModel
+import com.github.fruzelee.friends.model.entities.FriendsListResponse
+import com.github.fruzelee.friends.view.adapters.FriendsListAdapter
+import com.github.fruzelee.friends.viewmodel.FriendsListViewModel
 
-class RandomFriendsListActivity : AppCompatActivity() {
+class FriendsListActivity : AppCompatActivity() {
 
     private lateinit var mBinding: ActivityFriendsListBinding
-    private lateinit var mRandomFriendsViewModel: RandomFriendsViewModel
-    private lateinit var mRandomFriendsListAdapter: RandomFriendsListAdapter
+    private lateinit var mFriendsListViewModel: FriendsListViewModel
+    private lateinit var mFriendsListAdapter: FriendsListAdapter
     // A global variable for Progress Dialog
     private var mProgressDialog: Dialog? = null
 
@@ -28,8 +28,8 @@ class RandomFriendsListActivity : AppCompatActivity() {
         setContentView(mBinding.root)
 
         // Initialize the ViewModel variable.
-        mRandomFriendsViewModel = ViewModelProvider(this).get(RandomFriendsViewModel::class.java)
-        mRandomFriendsViewModel.getRandomFriendsFromAPI()
+        mFriendsListViewModel = ViewModelProvider(this).get(FriendsListViewModel::class.java)
+        mFriendsListViewModel.getRandomFriendsFromAPI()
         randomFriendsViewModelObserver()
         createRecyclerView()
         setUpSwipeRefreshListener()
@@ -43,7 +43,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
         mBinding.srlRandomFriends.setOnRefreshListener {
             // This method performs the actual data-refresh operation.
             // The method calls setRefreshing(false) when it's finished.
-            mRandomFriendsViewModel.getRandomFriendsFromSwipeRefresh()
+            mFriendsListViewModel.getRandomFriendsFromSwipeRefresh()
         }
     }
 
@@ -52,7 +52,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
      */
     private fun randomFriendsViewModelObserver() {
 
-        mRandomFriendsViewModel.randomFriendsResponse?.observe(
+        mFriendsListViewModel.randomFriendsResponse?.observe(
             this,
             { randomFriendsResponse ->
                 randomFriendsResponse?.let {
@@ -66,7 +66,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
                 }
             })
 
-        mRandomFriendsViewModel.randomFriendsLoadingError.observe(
+        mFriendsListViewModel.randomFriendsLoadingError.observe(
             this,
             { dataError ->
                 dataError?.let {
@@ -78,7 +78,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
                 }
             })
 
-        mRandomFriendsViewModel.loadRandomFriends.observe(this, { loadRandomFriends ->
+        mFriendsListViewModel.loadRandomFriends.observe(this, { loadRandomFriends ->
             loadRandomFriends?.let {
                 Log.i("Random Friends Loading", "$loadRandomFriends")
 
@@ -95,14 +95,14 @@ class RandomFriendsListActivity : AppCompatActivity() {
         })
     }
 
-    private fun setRandomFriendsResponseInUI(randomFriendsResponse: RandomFriendsResponse.Friend) {
-        val list: List<RandomFriendsResponse.Result> = randomFriendsResponse.results
+    private fun setRandomFriendsResponseInUI(randomFriendsResponse: FriendsListResponse.Friend) {
+        val list: List<FriendsListResponse.Result> = randomFriendsResponse.results
 
         /**
          * Make the adapter differ consume the friends list
          */
 
-        mRandomFriendsListAdapter.differ.submitList(list)
+        mFriendsListAdapter.differ.submitList(list)
     }
 
     private fun createRecyclerView() {
@@ -123,7 +123,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
                      */
 
                     GridLayoutManager(
-                        this@RandomFriendsListActivity,
+                        this@FriendsListActivity,
                         gridViewItemAmountLandscape
                     ) // for landscape mode
                 } else {
@@ -135,15 +135,15 @@ class RandomFriendsListActivity : AppCompatActivity() {
                      */
 
                     GridLayoutManager(
-                        this@RandomFriendsListActivity,
+                        this@FriendsListActivity,
                         gridViewItemAmountPortrait
                     ) // for portrait mode
                 }
 
             //initialize random friends list adapter
-            mRandomFriendsListAdapter = RandomFriendsListAdapter()
+            mFriendsListAdapter = FriendsListAdapter()
 
-            adapter = mRandomFriendsListAdapter
+            adapter = mFriendsListAdapter
 
             overScrollMode = View.OVER_SCROLL_NEVER // hide the overscroll effect
 
@@ -154,7 +154,7 @@ class RandomFriendsListActivity : AppCompatActivity() {
      * A function is used to show the Custom Progress Dialog.
      */
     private fun showCustomProgressDialog() {
-        mProgressDialog = Dialog(this@RandomFriendsListActivity)
+        mProgressDialog = Dialog(this@FriendsListActivity)
 
         mProgressDialog?.let {
             /*Set the screen content from a layout resource.

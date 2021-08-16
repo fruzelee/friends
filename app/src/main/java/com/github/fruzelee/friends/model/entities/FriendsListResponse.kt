@@ -5,7 +5,7 @@ package com.github.fruzelee.friends.model.entities
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-object RandomFriendsResponse {
+object FriendsListResponse {
     data class Friend(
         val info: Info,
         val results: List<Result>

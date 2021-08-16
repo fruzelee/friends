@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
                 // "execute when animation ends")
 
                 Handler(Looper.getMainLooper()).postDelayed({
-                    startActivity(Intent(this@SplashActivity, RandomFriendsListActivity::class.java))
+                    startActivity(Intent(this@SplashActivity, FriendsListActivity::class.java))
                     finish()
                 }, 1000)
             }

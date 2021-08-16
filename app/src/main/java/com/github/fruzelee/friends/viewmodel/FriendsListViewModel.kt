@@ -2,8 +2,8 @@ package com.github.fruzelee.friends.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.github.fruzelee.friends.model.entities.RandomFriendsResponse
-import com.github.fruzelee.friends.model.network.RandomFriendsApiService
+import com.github.fruzelee.friends.model.entities.FriendsListResponse
+import com.github.fruzelee.friends.model.network.FriendsListApiService
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.observers.DisposableSingleObserver
@@ -14,9 +14,9 @@ import io.reactivex.rxjava3.schedulers.Schedulers
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-class RandomFriendsViewModel : ViewModel() {
+class FriendsListViewModel : ViewModel() {
 
-    private val friendsListApiService = RandomFriendsApiService()
+    private val friendsListApiService = FriendsListApiService()
 
     /**
      * A disposable container that can hold onto multiple other Disposables and
@@ -29,7 +29,7 @@ class RandomFriendsViewModel : ViewModel() {
      * Creates a MutableLiveData with null value assigned to it.
      */
     val loadRandomFriends = MutableLiveData<Boolean>()
-    var randomFriendsResponse: MutableLiveData<RandomFriendsResponse.Friend>? = null
+    var randomFriendsResponse: MutableLiveData<FriendsListResponse.Friend>? = null
     val randomFriendsLoadingError = MutableLiveData<Boolean>()
 
     fun getRandomFriendsFromAPI() {
@@ -38,7 +38,7 @@ class RandomFriendsViewModel : ViewModel() {
          * handling orientation changes - without needing to re-fetch the data from network
          */
         if (randomFriendsResponse == null) {
-            randomFriendsResponse = MutableLiveData<RandomFriendsResponse.Friend>()
+            randomFriendsResponse = MutableLiveData<FriendsListResponse.Friend>()
             loadData()
         }
     }
@@ -81,8 +81,8 @@ class RandomFriendsViewModel : ViewModel() {
                  * Subscribes a given SingleObserver (subclass) to this Single and returns the given
                  * SingleObserver as is.
                  */
-                .subscribeWith(object : DisposableSingleObserver<RandomFriendsResponse.Friend>() {
-                    override fun onSuccess(value: RandomFriendsResponse.Friend?) {
+                .subscribeWith(object : DisposableSingleObserver<FriendsListResponse.Friend>() {
+                    override fun onSuccess(value: FriendsListResponse.Friend?) {
                         // Update the values with response in the success method.
                         loadRandomFriends.value = false
                         randomFriendsResponse?.value = value!!

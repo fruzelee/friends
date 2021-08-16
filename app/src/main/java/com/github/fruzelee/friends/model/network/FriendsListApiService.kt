@@ -1,6 +1,6 @@
 package com.github.fruzelee.friends.model.network
 
-import com.github.fruzelee.friends.model.entities.RandomFriendsResponse
+import com.github.fruzelee.friends.model.entities.FriendsListResponse
 import com.github.fruzelee.friends.utils.Constants
 import io.reactivex.rxjava3.core.Single
 import retrofit2.Retrofit
@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-class RandomFriendsApiService {
+class FriendsListApiService {
     /**
      * Retrofit adapts a Java interface to HTTP calls by using annotations on the declared methods to
      * define how requests are made. Create instances using {@linkplain Builder the builder} and pass
@@ -40,9 +40,9 @@ class RandomFriendsApiService {
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .build() // Create the Retrofit instance using the configured values.
         // Create an implementation of the API endpoints defined by the service interface in our case it is RandomFriendsAPI.
-        .create(RandomFriendsAPI::class.java)
+        .create(FriendsListAPI::class.java)
 
-    fun getRandomFriends(): Single<RandomFriendsResponse.Friend> {
+    fun getRandomFriends(): Single<FriendsListResponse.Friend> {
         return api.getRandomFriends(
             Constants.RANDOM_FRIENDS_NUMBER
         )
