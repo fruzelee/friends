@@ -18,13 +18,27 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
 
 # External Libraries
 
-1. **Lifecycle-aware components**, for automatically adjust their behavior based on the current lifecycle state.
+1. **Lifecycle-aware components**, for automatically adjust their behavior based on the current
+   lifecycle state.
 2. **Retrofit**, for Network call
 3. **RxJava**, for composing asynchronous and event-based programs by using observable sequences.
 4. **Glide**, for image loading.
 
 # Screenshots
 
-<img src="github_assets/1_splash_screen.jpg"  width="700" />
-<img src="github_assets/2_friends_list_portrait.jpg"  height="700" />
-<img src="github_assets/3_friends_list_landscape.jpg"  height="700" />
+Mobile Screenshots
+
+<p align="center">
+<img src="github_assets/1_splash_screen.jpg" alt="Drawing" style="width: 10px;"/>
+
+<p align="center">
+<img src="github_assets/2_friends_list_portrait.jpg" alt="Drawing" style="width: 10px;"/>
+
+<p align="center">
+<img src="github_assets/3_friends_list_landscape.jpg" alt="Drawing" style="width: 10px;"/>
+
+[comment]: <> (<img src="github_assets/1_splash_screen.jpg"  width="600" />)
+
+[comment]: <> (<img src="github_assets/2_friends_list_portrait.jpg"  height="600" />)
+
+[comment]: <> (<img src="github_assets/3_friends_list_landscape.jpg"  height="600" />)
