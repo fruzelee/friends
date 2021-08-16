@@ -4,10 +4,10 @@ Welcome to **Friends.**
 **Friends** is a native Android app for Android Responsive UI 
 that fetches and displays a grid of 10 Users from https://randomuser.me.
 
-#------Specifications------
+#Specifications
 
-• Used Android Studio to create the project.
-• Target Sdk is Android 11.
+• Used Android Studio to create the project.\n
+• Target Sdk is Android 11.\n
 • Kotlin is used as code in to the app.
 • Code maintains best practices & solid principle guideline.
 • Used standard Human Interface Guidelines to design the app.
