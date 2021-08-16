@@ -20,7 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_friends_list_layout" />
+            tools:listitem="@layout/item_random_friends_list_layout" />
 
         <TextView
             android:id="@+id/tv_no_friends_available"

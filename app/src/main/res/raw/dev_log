@@ -21,3 +21,4 @@ What's new:
 -new: Sets up a SwipeRefreshLayout.OnRefreshListener that is invoked when the user performs a swipe-to-refresh gesture.
 -new: added dev_log
 -update: friends list layout item UI
+-update: refactor the project a bit
