@@ -22,6 +22,7 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
 4. **Glide**, for image loading.
 
 # Screenshots
+<p align="center">
 Mobile Screenshots (Portrait)
 <p align="center">
 <img src="github_assets/1_splash_screen.jpg" alt="Drawing" style="width: 10px;"/>
