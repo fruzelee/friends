@@ -1,5 +1,6 @@
 package com.github.fruzelee.friends.view.activities
 
+import android.app.Dialog
 import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +8,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.github.fruzelee.friends.R
 import com.github.fruzelee.friends.databinding.ActivityFriendsListBinding
 import com.github.fruzelee.friends.model.entities.RandomFriendsResponse
 import com.github.fruzelee.friends.view.adapters.RandomFriendsListAdapter
@@ -17,6 +19,8 @@ class RandomFriendsListActivity : AppCompatActivity() {
     private lateinit var mBinding: ActivityFriendsListBinding
     private lateinit var mRandomFriendsViewModel: RandomFriendsViewModel
     private lateinit var mRandomFriendsListAdapter: RandomFriendsListAdapter
+    // A global variable for Progress Dialog
+    private var mProgressDialog: Dialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,9 +58,16 @@ class RandomFriendsListActivity : AppCompatActivity() {
                 }
             })
 
-        mRandomFriendsViewModel.loadRandomFriends.observe(this, { loadRandomDish ->
-            loadRandomDish?.let {
-                Log.i("Random Friends Loading", "$loadRandomDish")
+        mRandomFriendsViewModel.loadRandomFriends.observe(this, { loadRandomFriends ->
+            loadRandomFriends?.let {
+                Log.i("Random Friends Loading", "$loadRandomFriends")
+
+                // Show the progress dialog while loading random friends and hide when the usage is completed.
+                if (loadRandomFriends) {
+                    showCustomProgressDialog() // Used to show the progress dialog
+                } else {
+                    hideProgressDialog()
+                }
             }
         })
     }
@@ -113,6 +124,32 @@ class RandomFriendsListActivity : AppCompatActivity() {
 
             overScrollMode = View.OVER_SCROLL_NEVER // hide the overscroll effect
 
+        }
+    }
+
+    /**
+     * A function is used to show the Custom Progress Dialog.
+     */
+    private fun showCustomProgressDialog() {
+        mProgressDialog = Dialog(this@RandomFriendsListActivity)
+
+        mProgressDialog?.let {
+            /*Set the screen content from a layout resource.
+        The resource will be inflated, adding all top-level views to the screen.*/
+            it.setContentView(R.layout.dialog_custom_progress)
+
+            //Start the dialog and display it on screen.
+            it.show()
+        }
+    }
+
+    /**
+     * This function is used to dismiss the progress dialog if it is visible to user.
+     */
+    private fun hideProgressDialog() {
+        mProgressDialog?.let {
+            it.dismiss()
+            mProgressDialog = null
         }
     }
 
