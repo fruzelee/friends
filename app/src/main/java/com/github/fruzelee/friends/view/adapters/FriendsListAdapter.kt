@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.github.fruzelee.friends.databinding.ItemFriendsListLayoutBinding
 import com.github.fruzelee.friends.model.entities.FriendsListResponse
-import com.github.fruzelee.friends.utils.loadImage
+import com.github.fruzelee.friends.utils.loadPortrait
 
 /**
  * @author Fazle Rabbi
@@ -68,8 +68,8 @@ class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>()
 
         @SuppressLint("SetTextI18n")
         fun bindTo(friend: FriendsListResponse.Result?) {
-            // Load the friend image in the ImageView.
-            ivPortrait.loadImage(friend!!.picture.medium)
+            // Load the friends portrait in the ImageView.
+            ivPortrait.loadPortrait(friend!!.picture.large)
             tvFullName.text = friend.name.title + " " + friend.name.first + " " + friend.name.last
             tvCountry.text = friend.location.country
         }

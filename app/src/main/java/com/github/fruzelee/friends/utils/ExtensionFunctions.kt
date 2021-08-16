@@ -18,12 +18,11 @@ import com.github.fruzelee.friends.R
  *
  * takes the image Url (nullable [String]) as a parameter
  */
-fun ImageView.loadImage(url: String?) {
+fun ImageView.loadPortrait(url: String?) {
 
     val options = RequestOptions()
         .error(R.drawable.ic_image_not_found) // if the image can't be image can't be loaded icon
         .placeholder(R.drawable.ic_image_downloading) // show download icon when image is loading
-
 
     Glide.with(this.context)
         .setDefaultRequestOptions(options)
