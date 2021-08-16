@@ -26,19 +26,19 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
 
 # Screenshots
 
-Mobile Screenshots
-
+Mobile Screenshots (Portrait)
 <p align="center">
 <img src="github_assets/1_splash_screen.jpg" alt="Drawing" style="width: 10px;"/>
 
 <p align="center">
 <img src="github_assets/2_friends_list_portrait.jpg" alt="Drawing" style="width: 10px;"/>
 
+Mobile Screenshots (Landscape)
 <p align="center">
 <img src="github_assets/3_friends_list_landscape.jpg" alt="Drawing" style="width: 10px;"/>
 
-[comment]: <> (<img src="github_assets/1_splash_screen.jpg"  width="600" />)
+[comment]: <> (<img src="github_assets/1_splash_screen.jpg"  height="500" />)
 
-[comment]: <> (<img src="github_assets/2_friends_list_portrait.jpg"  height="600" />)
+[comment]: <> (<img src="github_assets/2_friends_list_portrait.jpg"  height="500" />)
 
-[comment]: <> (<img src="github_assets/3_friends_list_landscape.jpg"  height="600" />)
+[comment]: <> (<img src="github_assets/3_friends_list_landscape.jpg"  width="500" />)
