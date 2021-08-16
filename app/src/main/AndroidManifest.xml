@@ -2,18 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.github.fruzelee.friends">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Friends"
-        android:fullBackupContent="@xml/backup_descriptor">
+        android:theme="@style/Theme.Friends">
         <activity
-            android:name="com.github.fruzelee.friends.view.activities.SplashActivity"
-            android:theme="@style/Theme.Friends.NoActionBar"
-            android:exported="true">
+            android:name=".view.activities.RandomFriendsListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@style/Theme.Friends.NoActionBar" />
+        <activity
+            android:name=".view.activities.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:theme="@style/Theme.Friends.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +30,8 @@
         </activity>
         <activity
             android:name=".view.activities.MainActivity"
-            android:exported="true">
-        </activity>
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true" />
     </application>
 
 </manifest>

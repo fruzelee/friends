@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Friends</string>
 
-    <string name="splash_screen_title">Friends</string>
+    <string name="splash_screen_title">Welcome to Friends</string>
+    <string name="image_contentDescription">image</string>
+    <string name="label_no_friends_available">No friends available!!!</string>
+
 </resources>
