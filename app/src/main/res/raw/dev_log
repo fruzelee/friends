@@ -29,3 +29,6 @@ What's new:
 -new: set full name in a singleLine
 -new: added a swap icon on the custom toolbar
 -new: refresh the data when click on the swap icon
+-new: added layoutAnimation on recyclerView to make it more attractive when the item loads while changing orientation
+-new: added a condition where setRandomFriendsResponseInUI if the response isNotEmpty
+-new: also showing and hiding recyclerView and tvNoFriendsAvailable TextView depends on the response isNotEmpty or not
