@@ -43,6 +43,16 @@ class RandomFriendsViewModel : ViewModel() {
         }
     }
 
+    fun getRandomFriendsFromSwipeRefresh() {
+
+        /**
+         * Loading new data from network call that is invoked
+         * when the user performs a swipe-to-refresh gesture.
+         */
+        loadData()
+
+    }
+
     private fun loadData() {
         // Define the value of the load random friends.
         loadRandomFriends.value = true

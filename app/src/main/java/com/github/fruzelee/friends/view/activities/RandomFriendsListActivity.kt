@@ -32,7 +32,19 @@ class RandomFriendsListActivity : AppCompatActivity() {
         mRandomFriendsViewModel.getRandomFriendsFromAPI()
         randomFriendsViewModelObserver()
         createRecyclerView()
+        setUpSwipeRefreshListener()
+    }
 
+    private fun setUpSwipeRefreshListener() {
+        /**
+         * Sets up a SwipeRefreshLayout.OnRefreshListener that is invoked when the user
+         * performs a swipe-to-refresh gesture.
+         */
+        mBinding.srlRandomFriends.setOnRefreshListener {
+            // This method performs the actual data-refresh operation.
+            // The method calls setRefreshing(false) when it's finished.
+            mRandomFriendsViewModel.getRandomFriendsFromSwipeRefresh()
+        }
     }
 
     /**
@@ -46,6 +58,10 @@ class RandomFriendsListActivity : AppCompatActivity() {
                 randomFriendsResponse?.let {
                     Log.i("Random Friends Response", "$randomFriendsResponse")
 
+                    if (mBinding.srlRandomFriends.isRefreshing) {
+                        mBinding.srlRandomFriends.isRefreshing = false
+                    }
+
                     setRandomFriendsResponseInUI(randomFriendsResponse)
                 }
             })
@@ -55,6 +71,10 @@ class RandomFriendsListActivity : AppCompatActivity() {
             { dataError ->
                 dataError?.let {
                     Log.i("Random Friend API Error", "$dataError")
+
+                    if (mBinding.srlRandomFriends.isRefreshing) {
+                        mBinding.srlRandomFriends.isRefreshing = false
+                    }
                 }
             })
 
@@ -62,8 +82,11 @@ class RandomFriendsListActivity : AppCompatActivity() {
             loadRandomFriends?.let {
                 Log.i("Random Friends Loading", "$loadRandomFriends")
 
-                // Show the progress dialog while loading random friends and hide when the usage is completed.
-                if (loadRandomFriends) {
+                /**
+                 * Show the progress dialog if the SwipeRefreshLayout is not visible
+                 * while loading random friends and hide when the usage is completed.
+                 */
+                if (loadRandomFriends && !mBinding.srlRandomFriends.isRefreshing) {
                     showCustomProgressDialog() // Used to show the progress dialog
                 } else {
                     hideProgressDialog()
