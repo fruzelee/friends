@@ -32,10 +32,19 @@ class FriendsListActivity : AppCompatActivity() {
         mFriendsListViewModel.getRandomFriendsFromAPI()
         randomFriendsViewModelObserver()
         createRecyclerView()
-        setUpSwipeRefreshListener()
+        setUpSwipeRefresh()
+        mBinding.ivSwap.setOnClickListener { onSwapRefresh() }
     }
 
-    private fun setUpSwipeRefreshListener() {
+    private fun onSwapRefresh() {
+        /**
+         * This method performs the actual data-refresh operation.
+         * The method calls setRefreshing(false) when it's finished.
+         */
+        mFriendsListViewModel.getRandomFriendsFromSwipeRefresh()
+    }
+
+    private fun setUpSwipeRefresh() {
         /**
          * Sets up a SwipeRefreshLayout.OnRefreshListener that is invoked when the user
          * performs a swipe-to-refresh gesture.

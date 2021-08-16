@@ -26,3 +26,6 @@ What's new:
 -update: change the layout from ConstraintLayout to RelativeLayout on FriendsListView
 -change: refactor the project
 -update: updated the themes
+-new: set full name in a singleLine
+-new: added a swap icon on the custom toolbar
+-new: refresh the data when click on the swap icon
