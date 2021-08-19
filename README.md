@@ -1,4 +1,10 @@
 # Welcome to Friends
+
+[![Platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Gradle Version](https://img.shields.io/badge/gradle-7.0.0-green.svg)](https://docs.gradle.org/current/release-notes)
+[![Awesome Kotlin Badge](https://kotlin.link/awesome-kotlin.svg)](https://github.com/KotlinBy/awesome-kotlin)
+
 Welcome to **Friends.**
 **Friends** is a native Android app for Android Responsive UI 
 that fetches and displays a grid of 10 Users from https://randomuser.me.
@@ -37,3 +43,21 @@ Mobile Screenshots (Landscape)
 [comment]: <> (<img src="github_assets/2_friends_list_portrait.jpg"  height="500" />)
 
 [comment]: <> (<img src="github_assets/3_friends_list_landscape.jpg"  width="500" />)
+
+# License
+
+```
+    Copyright (C) Fazle Rabbi
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+```
