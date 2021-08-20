@@ -51,16 +51,16 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
     <th>Portrait Example 6: Friend Details (Portrait Collapse): Arabic</th>
   </tr>
   <tr>
-    <td><img src="github_assets/portrait/port_4_friend_details_3.jpg"/></td>
-    <td><img src="github_assets/portrait/port_4_friend_details_4.jpg"/></td>
+    <td><img src="github_assets/portrait/port_5_friend_details_3.jpg"/></td>
+    <td><img src="github_assets/portrait/port_6_friend_details_4.jpg"/></td>
   </tr>
   <tr>
     <th>Portrait Example 7: Send Mail</th>
     <th>Portrait Example 8: Compose Mail</th>
   </tr>
   <tr>
-    <td><img src="github_assets/portrait/port_4_friend_details_send_mail.jpg"/></td>
-    <td><img src="github_assets/portrait/port_4_friend_details_send_mail_2.jpg"/></td>
+    <td><img src="github_assets/portrait/port_7_friend_details_send_mail.jpg"/></td>
+    <td><img src="github_assets/portrait/port_8_friend_details_send_mail_2.jpg"/></td>
   </tr>
 
   <tr>
@@ -68,24 +68,24 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
     <th>Landscape Example 2: Friends List</th>
   </tr>
   <tr>
-    <td><img src="github_assets/portrait/land_1_splash.jpg"/></td>
-    <td><img src="github_assets/portrait/land_2_friends_list.jpg"/></td>
+    <td><img src="github_assets/landscape/land_1_splash.jpg"/></td>
+    <td><img src="github_assets/landscape/land_2_friends_list.jpg"/></td>
   </tr>
   <tr>
     <th>Landscape Example 3: Friend Details (Portrait Expand)</th>
     <th>Landscape Example 4: Friend Details (Portrait Collapse)</th>
   </tr>
   <tr>
-    <td><img src="github_assets/portrait/land_3_friend_details.jpg"/></td>
-    <td><img src="github_assets/portrait/land_4_friend_details_2.jpg"/></td>
+    <td><img src="github_assets/landscape/land_3_friend_details.jpg"/></td>
+    <td><img src="github_assets/landscape/land_4_friend_details_2.jpg"/></td>
   </tr>
   <tr>
     <th>Landscape Example 5: Friend Details (Portrait Collapse)</th>
     <th>Landscape Example 6: Send Mail</th>
   </tr>
   <tr>
-    <td><img src="github_assets/portrait/land_3_friend_details_3.jpg"/></td>
-    <td><img src="github_assets/portrait/port_4_friend_details_send_mail.jpg"/></td>
+    <td><img src="github_assets/landscape/land_5_friend_details_3.jpg"/></td>
+    <td><img src="github_assets/landscape/land_6_friend_details_send_mail.jpg"/></td>
   </tr>
   </table>
 

@@ -71,3 +71,4 @@ What's new:
     but can be run afterwards by continuing to use the assistant after running the upgrade.
 -update: README.md: added new Portrait Examples
 -update: README.md: added new Landscape Examples
+-update: README.md: refactoring the github assets
