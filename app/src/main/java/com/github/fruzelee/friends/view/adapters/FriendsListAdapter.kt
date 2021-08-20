@@ -19,10 +19,8 @@ import com.github.fruzelee.friends.view.activities.FriendDetailsActivity
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-class FriendsListAdapter(val activity: Activity) :
+class FriendsListAdapter(private val activity: Activity) :
     RecyclerView.Adapter<FriendsListAdapter.ViewHolder>() {
-
-    private lateinit var friends: List<FriendsListResponse.Result>
 
     /**
      * Inflates the item views which is designed in xml layout file
@@ -125,7 +123,7 @@ class FriendsListAdapter(val activity: Activity) :
                 return false
             }
 
-            if (oldItem.picture.medium != newItem.picture.medium) {
+            if (oldItem.picture.large != newItem.picture.large) {
                 return false
             }
 

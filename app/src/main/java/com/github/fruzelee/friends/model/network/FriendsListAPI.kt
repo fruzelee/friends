@@ -17,7 +17,6 @@ interface FriendsListAPI {
      *
      * Pass the endpoint of the URL that is defined in the Constants.
      *
-     *
      */
     @GET(Constants.API_ENDPOINT)
     fun getRandomFriends(
