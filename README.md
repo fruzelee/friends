@@ -27,16 +27,65 @@ that fetches and displays a grid of 10 Users from https://randomuser.me.
 3. **RxJava**, for composing asynchronous and event-based programs by using observable sequences.
 4. **Glide**, for image loading.
 
-# Screenshots
-<p align="center">
-Mobile Screenshots (Portrait)
-<p align="center">
-<img src="github_assets/1_splash_screen.jpg" alt="Drawing" style="width: 10px;"/>
-<p align="center">
-<img src="github_assets/2_friends_list_portrait.jpg" alt="Drawing" style="width: 10px;"/>
-Mobile Screenshots (Landscape)
-<p align="center">
-<img src="github_assets/3_friends_list_landscape.jpg" alt="Drawing" style="width: 10px;"/>
+# Demo App
+
+<table style="width:100%">
+  <tr>
+    <th>Portrait Example 1: Splash</th>
+    <th>Portrait Example 2: Friends List</th>
+  </tr>
+  <tr>
+    <td><img src="github_assets/portrait/port_1_splash.jpg"/></td>
+    <td><img src="github_assets/portrait/port_2_friends_list.jpg"/></td>
+  </tr>
+ 
+  <tr>
+    <th>Portrait Example 3: Friend Details (Portrait Expand)</th>
+    <th>Portrait Example 4: Friend Details (Portrait Collapse)</th>
+  </tr>
+  <tr>
+    <td><img src="github_assets/portrait/port_3_friend_details.jpg"/></td>
+    <td><img src="github_assets/portrait/port_4_friend_details_2.jpg"/></td>
+  </tr>
+ 
+  <tr>
+    <th>Portrait Example 5: Friend Details (Portrait Expand): Arabic</th>
+    <th>Portrait Example 6: Friend Details (Portrait Collapse): Arabic</th>
+  </tr>
+  <tr>
+    <td><img src="github_assets/portrait/port_4_friend_details_3.jpg"/></td>
+    <td><img src="github_assets/portrait/port_4_friend_details_4.jpg"/></td>
+  </tr>
+ 
+  <tr>
+    <th>Portrait Example 7: Send Mail</th>
+    <th>Portrait Example 8: Compose Mail</th>
+  </tr>
+  <tr>
+    <td><img src="github_assets/portrait/port_4_friend_details_send_mail.jpg"/></td>
+    <td><img src="github_assets/portrait/port_4_friend_details_send_mail_2.jpg"/></td>
+  </tr>
+  </table>
+
+[comment]: <> (# Screenshots)
+
+[comment]: <> ([comment]: <> &#40;<p align="center">&#41;)
+
+[comment]: <> ([comment]: <> &#40;Mobile Screenshots &#40;Portrait&#41;&#41;)
+
+[comment]: <> ([comment]: <> &#40;<p align="center">&#41;)
+
+[comment]: <> ([comment]: <> &#40;<img src="github_assets/1_splash_screen.jpg" alt="Drawing" style="width: 10px;"/>&#41;)
+
+[comment]: <> ([comment]: <> &#40;<p align="center">&#41;)
+
+[comment]: <> ([comment]: <> &#40;<img src="github_assets/2_friends_list_portrait.jpg" alt="Drawing" style="width: 10px;"/>&#41;)
+
+[comment]: <> ([comment]: <> &#40;Mobile Screenshots &#40;Landscape&#41;&#41;)
+
+[comment]: <> ([comment]: <> &#40;<p align="center">&#41;)
+
+[comment]: <> ([comment]: <> &#40;<img src="github_assets/3_friends_list_landscape.jpg" alt="Drawing" style="width: 10px;"/>&#41;)
 
 [comment]: <> (<img src="github_assets/1_splash_screen.jpg"  height="500" />)
 
