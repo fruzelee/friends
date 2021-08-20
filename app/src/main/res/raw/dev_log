@@ -70,3 +70,4 @@ What's new:
     post-upgrade steps must be run no earlier,
     but can be run afterwards by continuing to use the assistant after running the upgrade.
 -update: README.md: added new Portrait Examples
+-update: README.md: added new Landscape Examples
