@@ -18,4 +18,6 @@
     <color name="secondary_color">#81C784</color>
     <color name="secondary_dark_color">#519657</color>
     <color name="secondary_light_color">#B2FAB4</color>
+
+    <color name="dividerColor">#BDBDBD</color>
 </resources>

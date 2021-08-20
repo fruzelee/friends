@@ -13,6 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Friends">
         <activity
+            android:name=".view.activities.FriendDetailsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Friends.NoActionBar" />
+        <activity
             android:name=".view.activities.FriendsListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"

@@ -162,7 +162,7 @@ class FriendsListActivity : AppCompatActivity() {
                 }
 
             //initialize random friends list adapter
-            mFriendsListAdapter = FriendsListAdapter()
+            mFriendsListAdapter = FriendsListAdapter(this@FriendsListActivity)
 
             adapter = mFriendsListAdapter
 

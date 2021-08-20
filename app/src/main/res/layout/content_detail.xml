@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.activities.FriendDetailsActivity"
+    tools:showIn="@layout/activity_friend_details">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textColor="@android:color/black"
+            android:textFontWeight="900"
+            android:textSize="22sp"
+            app:fontFamily="@font/raleway_font_family"
+            tools:targetApi="p"
+            tools:text="Two-line item" />
+
+        <include
+            android:id="@+id/include_address_layout"
+            layout="@layout/address_layout" />
+
+        <include
+            android:id="@+id/include_email_layout"
+            layout="@layout/email_layout" />
+
+        <include
+            android:id="@+id/include_phone_layout"
+            layout="@layout/phone_layout" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

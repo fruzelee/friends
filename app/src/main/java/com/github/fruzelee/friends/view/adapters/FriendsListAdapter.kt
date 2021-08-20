@@ -1,6 +1,8 @@
 package com.github.fruzelee.friends.view.adapters
 
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -8,16 +10,19 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.github.fruzelee.friends.databinding.ItemFriendsListLayoutBinding
 import com.github.fruzelee.friends.model.entities.FriendsListResponse
+import com.github.fruzelee.friends.utils.Constants
 import com.github.fruzelee.friends.utils.loadPortrait
+import com.github.fruzelee.friends.view.activities.FriendDetailsActivity
 
 /**
  * @author Fazle Rabbi
  * github.com/fruzelee
  * web: fr.crevado.com
  */
-class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>() {
+class FriendsListAdapter(val activity: Activity) :
+    RecyclerView.Adapter<FriendsListAdapter.ViewHolder>() {
 
-    private var friends: List<FriendsListResponse.Result> = listOf()
+    private lateinit var friends: List<FriendsListResponse.Result>
 
     /**
      * Inflates the item views which is designed in xml layout file
@@ -49,7 +54,7 @@ class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>()
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val friend = differ.currentList[position]
-        holder.bindTo(friend)
+        holder.bindTo(activity, friend)
     }
 
     /**
@@ -62,16 +67,26 @@ class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>()
      */
     class ViewHolder(view: ItemFriendsListLayoutBinding) : RecyclerView.ViewHolder(view.root) {
         // Holds the View that will add each item to
+        private val layoutParent = view.layoutParent
         private val ivPortrait = view.ivPortrait
         private val tvFullName = view.tvFullName
         private val tvCountry = view.tvCountry
 
         @SuppressLint("SetTextI18n")
-        fun bindTo(friend: FriendsListResponse.Result?) {
+        fun bindTo(activity: Activity, friend: FriendsListResponse.Result) {
             // Load the friends portrait in the ImageView.
-            ivPortrait.loadPortrait(friend!!.picture.large)
+            ivPortrait.loadPortrait(friend.picture.large)
             tvFullName.text = friend.name.title + " " + friend.name.first + " " + friend.name.last
             tvCountry.text = friend.location.country
+
+
+
+            layoutParent.setOnClickListener {
+                val intent = Intent(activity, FriendDetailsActivity::class.java)
+                // passes the user object to the friend details activity
+                intent.putExtra(Constants.FRIEND_DETAILS, friend)
+                activity.startActivity(intent)
+            }
         }
     }
 
@@ -117,7 +132,6 @@ class FriendsListAdapter : RecyclerView.Adapter<FriendsListAdapter.ViewHolder>()
             return true
         }
     }
-
 
     /**
      * This will consume the list of users from the user list live data

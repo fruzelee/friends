@@ -3,15 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.246875" />
+        <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.246875" />
+        <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.246875" />
+        <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.246875" />
+        <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_baseline_phone_24.xml" value="0.246875" />
         <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_image_downloading.xml" value="0.10185185185185185" />
         <entry key="..\:/assignment/friends/app/src/main/res/drawable/ic_image_not_found.xml" value="0.10185185185185185" />
         <entry key="..\:/assignment/friends/app/src/main/res/font/raleway_font_family.xml" value="0.16203703703703703" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/activity_friend_details.xml" value="0.21302083333333333" />
         <entry key="..\:/assignment/friends/app/src/main/res/layout/activity_friends_list.xml" value="0.2" />
         <entry key="..\:/assignment/friends/app/src/main/res/layout/activity_main.xml" value="0.21666666666666667" />
         <entry key="..\:/assignment/friends/app/src/main/res/layout/activity_random_friends_list.xml" value="0.2" />
         <entry key="..\:/assignment/friends/app/src/main/res/layout/activity_splash.xml" value="0.19972826086956522" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/address_layout.xml" value="0.22708333333333333" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/content_detail.xml" value="0.20481927710843373" />
         <entry key="..\:/assignment/friends/app/src/main/res/layout/dialog_custom_progress.xml" value="0.22708333333333333" />
-        <entry key="..\:/assignment/friends/app/src/main/res/layout/item_friends_list_layout.xml" value="0.4660714285714286" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/email_layout.xml" value="0.19610507246376813" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/item_friends_list_layout.xml" value="0.2" />
+        <entry key="..\:/assignment/friends/app/src/main/res/layout/phone_layout.xml" value="0.22708333333333333" />
       </map>
     </option>
   </component>

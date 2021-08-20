@@ -24,4 +24,7 @@ object Constants {
 
     // KEY PARAMS
     const val KEY_RESULTS: String = "results"
+
+    // const variables
+    const val FRIEND_DETAILS = "FRIENDS_DETAILS"
 }

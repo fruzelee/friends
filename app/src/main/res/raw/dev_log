@@ -50,3 +50,17 @@ What's new:
 -new: added Apache License
 -new: added custom font support
 -update: Base application theme
+
+
+v0.3(3)
+What's new:
+-new: Friend Details Screen
+-new: Tapping on a friend card is navigating to a detailed view of the friend displaying:
+      • Portrait
+      • Full Name
+      • Address
+      • City, State, and Country
+      • Email
+      • Cell phone
+-new: Tapping on the friend’s email should open the mail app to send them an email.
+-update: Base application theme style

@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">Friends</string>
 
-    <string name="splash_screen_title">Welcome \nto \nFriends</string>
+    <string name="splash_screen_title">Welcome to Friends</string>
     <string name="image_contentDescription">image</string>
     <string name="label_no_friends_available">No friends available!!!</string>
     <string name="please_wait">Please Wait&#8230;</string>
     <string name="friends_list">Friends List</string>
+
+    <string name="email">Email</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="cell">Cell</string>
 
 </resources>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/Detail.Icon"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/image_contentDescription"
+        android:src="@drawable/ic_baseline_location_on_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/street"
+        style="@style/Detail.PrimaryText"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/streetLabel"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="Two-line item" />
+
+    <TextView
+        android:id="@+id/streetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/street"
+        android:textFontWeight="300"
+        app:fontFamily="@font/raleway_font_family"
+        tools:targetApi="p"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/street" />
+
+    <View
+        android:id="@+id/streetView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/streetLabel"
+        app:layout_constraintTop_toBottomOf="@+id/streetLabel" />
+
+    <TextView
+        android:id="@+id/city"
+        style="@style/Detail.PrimaryText"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/streetView"
+        tools:text="Two-line item" />
+
+    <TextView
+        android:id="@+id/cityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="@string/city"
+        android:textFontWeight="300"
+        app:fontFamily="@font/raleway_font_family"
+        tools:targetApi="p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <View
+        android:id="@+id/cityView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityLabel" />
+
+    <TextView
+        android:id="@+id/state"
+        style="@style/Detail.PrimaryText"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityView"
+        tools:text="Two-line item" />
+
+    <TextView
+        android:id="@+id/stateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="@string/state"
+        android:textFontWeight="300"
+        app:fontFamily="@font/raleway_font_family"
+        tools:targetApi="p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state" />
+
+    <View
+        android:id="@+id/stateView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/dividerColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateLabel" />
+
+    <TextView
+        android:id="@+id/country"
+        style="@style/Detail.PrimaryText"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stateView"
+        tools:text="Two-line item" />
+
+    <TextView
+        android:id="@+id/countryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:text="@string/country"
+        android:textFontWeight="300"
+        app:fontFamily="@font/raleway_font_family"
+        tools:targetApi="p"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
