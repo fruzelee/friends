@@ -64,3 +64,8 @@ What's new:
       • Cell phone
 -new: Tapping on the friend’s email should open the mail app to send them an email.
 -update: Base application theme style
+-upgrade: Upgraded AGP dependency from 7.0.0 to 7.0.1
+    Changing the version of the Android Gradle Plugin dependency effectively upgrades the project.
+    Pre-upgrade steps must be run no later than this version change;
+    post-upgrade steps must be run no earlier,
+    but can be run afterwards by continuing to use the assistant after running the upgrade.
